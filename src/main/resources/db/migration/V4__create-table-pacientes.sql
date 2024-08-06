@@ -1,6 +1,11 @@
+CREATE SEQUENCE IF NOT EXISTS public.pacientes_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1;
+
 create table pacientes(
 
-    id bigint not null auto_increment,
+    id bigint NOT NULL DEFAULT nextval('pacientes_id_seq'::regclass),
     nome varchar(100) not null,
     email varchar(100) not null unique,
     cpf varchar(14) not null unique,
@@ -12,7 +17,7 @@ create table pacientes(
     uf char(2) not null,
     cidade varchar(100) not null,
     telefone varchar(20) not null,
-    ativo tinyint not null,
+    ativo boolean not null,
 
     primary key(id)
 

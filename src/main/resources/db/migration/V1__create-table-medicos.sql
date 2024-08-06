@@ -1,6 +1,11 @@
+CREATE SEQUENCE IF NOT EXISTS public.medicos_id_seq
+    INCREMENT 1
+    START 1
+    MINVALUE 1;
+
 create table medicos(
 
-    id bigint not null auto_increment,
+    id bigint NOT NULL DEFAULT nextval('medicos_id_seq'::regclass),
     nome varchar(100) not null,
     email varchar(100) not null unique,
     crm varchar(6) not null unique,
