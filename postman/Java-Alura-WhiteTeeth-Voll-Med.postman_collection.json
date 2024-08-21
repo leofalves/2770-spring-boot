@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "9a00fe44-0d96-4c71-b29a-be2630193495",
+		"name": "Java-Alura-WhiteTeeth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "896183"
+	},
+	"item": [
+		{
+			"name": "Hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewDoctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Doctor",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"Clara Lua Alves\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Doctor Address",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"address\" : {\r\n        \"line1\": \"Avenida Azevedo Marques\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Doctors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Doctor",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctors/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Patient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Elaine Carla da Silva\",\r\n    \"email\": \"elacasilva@hotmail.com\",\r\n    \"phoneNumber\": \"119973457890\",\r\n    \"cpf\": \"16789890023\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Doctors Pageable",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctors?size=3&sort=cro,desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "3"
+						},
+						{
+							"key": "sort",
+							"value": "cro,desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Doctors Pageable (Parameters name in PT-BR)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctors?tamanho=3&ordem=cro,desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctors"
+					],
+					"query": [
+						{
+							"key": "tamanho",
+							"value": "3"
+						},
+						{
+							"key": "ordem",
+							"value": "cro,desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Novo Medico",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Leo Alves\",\r\n    \"email\": \"leoalves@hotmail.com\",\r\n    \"telefone\": \"999879788\",\r\n    \"crm\": \"614585\",\r\n    \"especialidade\": \"DERMATOLOGIA\",\r\n    \"endereco\" : {\r\n        \"logradouro\": \"Rua Corypheu\",\r\n        \"bairro\": \"Jardim Paraventi\",\r\n        \"cep\": \"07120270\",\r\n        \"cidade\": \"Guarulhos\",\r\n        \"uf\": \"SP\",\r\n        \"numero\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Medicos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos?size=3&sort=id,desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "3"
+						},
+						{
+							"key": "sort",
+							"value": "id,desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Novo Paciente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Elaine Carla da Silva\",\r\n    \"email\": \"elacasilva@hotmail.com\",\r\n    \"telefone\": \"119973457890\",\r\n    \"cpf\": \"120.120.120-34\",\r\n    \"endereco\" : {\r\n        \"logradouro\": \"Rua Corypheu\",\r\n        \"bairro\": \"Jardim Paraventi\",\r\n        \"cep\": \"07120270\",\r\n        \"cidade\": \"Guarulhos\",\r\n        \"uf\": \"SP\",\r\n        \"numero\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pacientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pacientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete medico",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Medico",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 7,\r\n    \"nome\": \"Leo Fabiano Alves\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detalhe Medico",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medicos/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medicos",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticacao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"joao.silva@gmail.com\",\r\n    \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
