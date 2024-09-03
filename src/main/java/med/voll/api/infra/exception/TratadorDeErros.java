@@ -60,6 +60,12 @@ public class TratadorDeErros {
         return ResponseEntity.badRequest().body(error);
     }
 
+    @ExceptionHandler(ValidacaoException.class)
+    public ResponseEntity tratarErroValidacao(ValidacaoException ex){
+        var error = ex.getMessage();
+        return ResponseEntity.badRequest().body(new DadosErroValidacao("Business Rules", error));
+    }
+
     private record DadosErroValidacao(String campo, String mensagem){
         public DadosErroValidacao(FieldError erro){
             this(erro.getField(), erro.getDefaultMessage());

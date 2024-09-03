@@ -282,11 +282,21 @@
 		{
 			"name": "Novo Medico",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FvLnNpbHZhQGdtYWlsLmNvbSIsImlzcyI6IkFQSSBWb2xsLm1lZCIsImlkIjoxLCJleHAiOjE3MjQzNDY4NTN9.kws7HzOfSNuG2jPZd03yRaPvuWHs5XQ3qaU2c_72iRM",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nome\": \"Leo Alves\",\r\n    \"email\": \"leoalves@hotmail.com\",\r\n    \"telefone\": \"999879788\",\r\n    \"crm\": \"614585\",\r\n    \"especialidade\": \"DERMATOLOGIA\",\r\n    \"endereco\" : {\r\n        \"logradouro\": \"Rua Corypheu\",\r\n        \"bairro\": \"Jardim Paraventi\",\r\n        \"cep\": \"07120270\",\r\n        \"cidade\": \"Guarulhos\",\r\n        \"uf\": \"SP\",\r\n        \"numero\": \"897\"\r\n    }\r\n}",
+					"raw": "{\r\n    \"nome\": \"Leo Alves\",\r\n    \"email\": \"leofabalves@hotmail.com\",\r\n    \"telefone\": \"999879788\",\r\n    \"crm\": \"614587\",\r\n    \"especialidade\": \"DERMATOLOGIA\",\r\n    \"endereco\" : {\r\n        \"logradouro\": \"Rua Corypheu\",\r\n        \"bairro\": \"Jardim Paraventi\",\r\n        \"cep\": \"07120270\",\r\n        \"cidade\": \"Guarulhos\",\r\n        \"uf\": \"SP\",\r\n        \"numero\": \"897\"\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -313,11 +323,21 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FvLnNpbHZhQGdtYWlsLmNvbSIsImlzcyI6IkFQSSBWb2xsLm1lZCIsImlkIjoxLCJleHAiOjE3MjUzNzc4NjV9.ejRApAW_h_iYS_bncFU6oAbM6x4k3XMwhAlyaR6uZhw",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Clara Lua\",\r\n    \"email\": \"clara@hotmail.com\",\r\n    \"phoneNumber\": \"999876577\",\r\n    \"cro\": \"638361\",\r\n    \"speciality\": \"ORTHODONTIST\",\r\n    \"address\" : {\r\n        \"line1\": \"Rua Corypheu\",\r\n        \"line2\": \"Jardim Paraventi\",\r\n        \"zipCode\": \"07120270\",\r\n        \"city\": \"Guarulhos\",\r\n        \"state\": \"SP\",\r\n        \"number\": \"897\"\r\n    }\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -325,7 +345,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/medicos?size=3&sort=id,desc",
+					"raw": "http://localhost:8080/medicos?size=5&sort=id,desc",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -337,7 +357,7 @@
 					"query": [
 						{
 							"key": "size",
-							"value": "3"
+							"value": "5"
 						},
 						{
 							"key": "sort",
@@ -439,6 +459,16 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FvLnNpbHZhQGdtYWlsLmNvbSIsImlzcyI6IkFQSSBWb2xsLm1lZCIsImlkIjoxLCJleHAiOjE3MjQzNDYzMjR9.aLDScprSQsJEss5j-2_M0RhERSvyMjFQ2bihWppSLr4",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"body": {
@@ -488,6 +518,82 @@
 					"port": "8080",
 					"path": [
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nova Consulta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FvLnNpbHZhQGdtYWlsLmNvbSIsImlzcyI6IkFQSSBWb2xsLm1lZCIsImlkIjoxLCJleHAiOjE3MjUzNzc4NjV9.ejRApAW_h_iYS_bncFU6oAbM6x4k3XMwhAlyaR6uZhw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paciente_id\": 1,\r\n    \"idMedico\": 7,\r\n    \"data\": \"2024-09-03T11:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/consultas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nova Consulta Especialidade",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FvLnNpbHZhQGdtYWlsLmNvbSIsImlzcyI6IkFQSSBWb2xsLm1lZCIsImlkIjoxLCJleHAiOjE3MjUzNzc4NjV9.ejRApAW_h_iYS_bncFU6oAbM6x4k3XMwhAlyaR6uZhw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paciente_id\": 1,\r\n    \"especialidade\": \"GINECOLOGIA\",\r\n    \"data\": \"2024-09-23T11:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/consultas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultas"
 					]
 				}
 			},
